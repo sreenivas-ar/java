@@ -1,0 +1,543 @@
+https://docs.oracle.com/javase/tutorial/java/javaOO/index.html
+
+Object and Class:
+
+Object have properties and Behaviour and also Identity.
+Example: A car have properties like color, brand, cost and behaviour like acceleration,brake, start
+
+A class is a template or blueprint from which objects are created. So, an object is the instance(result) of a class.
+
+https://medium.com/@shaistha24/java-part-8-class-and-object-8012ee5e65e4
+
+Methods:
+
+Methods in Java are like action or behavior blocks that you can define inside a class. They allow you to perform specific tasks or operations on data.
+A method is a block of code that performs a specific task. It is a way to group together related instructions so that they can be executed as a single unit.
+It holds some behaviour(operations)
+Example:
+public void myMethod(int a, int b) {
+  int c = a + b;
+  System.out.println(c);
+}
+
+Method Overloading:
+
+Method overloading in Java refers to the ability to define multiple methods in a class with the same name but different parameters. 
+It allows you to create methods that perform similar tasks but with different input arguments.
+
+Method Overiding:
+in object-oriented programming where a subclass provides its own implementation of a method that is already defined in its superclass. 
+It allows a subclass to modify or extend the behavior of an inherited method.
+
+Stack and Heap:
+
+the stack memory(LIFO) is used for storing local variables and method calls, while the heap memory is used for storing objects and dynamically allocated data. 
+Understanding the distinction between stack and heap memory is important for managing memory usage and optimizing the performance of Java applications.
+
+String:
+
+String class represents a sequence of characters. It is one of the most commonly used classes in Java for working with textual data.
+
+Mutable and Immutable:
+
+Mutable means change : Mutable objects can be modified or changed after they are created.
+Immutable means unchange Example: String : Immutable objects cannot be modified or changed after they are created.
+
+String Builder and String Buffer:
+
+Static:
+something making as a class member not a object member
+
+Static Variables:
+Static varable actually shared by different objects and also we can call it by class as well
+A static variable, also known as a class variable, is shared among all instances of the class.
+It is declared with the static keyword and exists independently of any specific instance of the class.
+
+Static Block:
+
+Whenever you are creating object... two things will happens one is class loads and objects are Instantiated.... Class loads once, it will be in JVM
+static block in Java is a block of code that is executed only once, when the class is loaded into memory. 
+Static blocks are used to initialize static variables or to call static methods. 
+They are also used to perform any other tasks that need to be done only once, when the class is loaded.
+
+We can use initialize the static varable inside a constructur
+
+Static Methods:
+
+Java is a method that belongs to a class rather than an instance of a class. 
+This means you can call a static method without creating an object of the class.
+
+We can use static variables inside the static method bur not posible to use non static variables.
+
+Mian method is Static... if you dont mention it as static it bcomes non static method which means if you want to call main..we have to first create the object of Demo
+it means You cannot call the main without the object of demo.
+
+Encapsulation:
+
+Private variables can accessible only in the same class.
+Everytime you create a instance varaible make it private
+We can access the data through Methods.
+
+the bundling of data (variables) and code (methods) that operate on that data within a single unit
+the data members name and age are declared as private. This means that they cannot be accessed directly from other classes. 
+Instead, they must be accessed through the getter and setter methods. 
+The getter methods return the value of the data members, while the setter methods modify the value of the data members.
+
+this Keyword:
+
+if you want to local and instance variablesto be same. we can refer instance varaible by this.age
+
+when you create objects from a class, each object has its own set of variables and methods. 
+The this keyword is like a special word that refers to the current object you are working with.
+
+public class Person {
+    private String name;
+
+    public void setName(String name) {
+        this.name = name; // Here, "this.name" refers to the name of the current object (person1)
+    }
+}
+
+Constructor:
+
+Everytime you create a object, it will call constructor.
+
+The name of the constructor must be the same as the name of the class.
+A constructor cannot have a return type.
+Constructors are called when an instance of a class is created.
+Constructors can be used to initialize the fields of an object.
+Constructors can also be used to perform other tasks, such as opening a file or connecting to a database.
+
+Default and Parameterized:
+
+Default constructor: If a class does not have any constructors, the Java compiler will automatically create a default constructor for the class. 
+The default constructor does not take any arguments and does not initialize any fields.
+
+Parameterized constructor: A parameterized constructor is a constructor that takes one or more arguments. 
+The arguments are used to initialize the fields of the object that is created.
+
+this and Super Methods:
+
+Every constructor have a method even if you don't mention it. that is super()
+super means call the constructor of super classs
+the super() will be default and first line of your method.
+
+Every class in java extends Object Class when you are not mentioning extend
+
+super() The super keyword refers to the parent object. It can be used to refer to the parent object's fields, methods, and constructors.
+
+this() this will execute the constructor in the same class.
+
+Anonomous Object:
+
+An anonymous object in Java refers to an object that is created without assigning it to a variable. 
+It is typically used for short-lived instances that are used only once and do not require a reference for further use. 
+C obj=new C();
+C obj is the reference creation/variable and new C() is the object creation.
+
+Inhertance:
+
+is, has
+
+The is keyword: The is keyword is used to express the is-a relationship between two classes. 
+This means that one class is a type of another class. For example, a Car is a type of Vehicle.
+
+The has keyword: The has keyword is used to express the has-a relationship between two classes. 
+This means that one class has an instance of another class. For example, a Car has an instance of a Engine
+
+Moto is a mobile
+
+A mobile has OS, Ram, ROM
+
+allows one class to inherit the properties and behaviors of another class. In Java, classes can form an inheritance hierarchy
+
+Single inheritance: In single inheritance, a class can inherit from only one parent class. This is the most common type of inheritance in Java.
+
+Multilevel inheritance: In multilevel inheritance, a class can inherit from multiple parent classes. 
+This is achieved by inheriting from a class that has already inherited from another class.
+
+Hierarchical/Multiple inheritance: In hierarchical inheritance, a class can inherit from multiple parent classes, 
+but the parent classes form a hierarchy. This means that the parent classes are related to each other in a tree-like structure.
+Ambiguity in Inhertance
+
+Jave doesnot support multiple inheritance.
+
+Hybrid inheritance: In hybrid inheritance, a class can inherit from multiple parent classes, and the parent classes can form a hierarchy. 
+This is a combination of multilevel and hierarchical inheritance.
+
+
+Method Overriding:
+
+in object-oriented programming where a subclass provides its own implementation of a method that is already defined in its superclass. 
+It allows a subclass to modify or extend the behavior of an inherited method.
+
+packages:
+
+to package in one folder......... package tools;
+
+import the package using..... import tools.filesname;
+
+Polymorphism:
+
+poly  means many
+morphisam means behavior
+
+Two types: Compile time polymorphism(overloading), Run Time Polymorphism(overriding)
+
+allows you to treat objects of different types in a similar way. 
+
+There are two types of polymorphism in Java:
+
+Compile-time polymorphism: This is also known as method overloading. 
+It occurs when a class has multiple methods with the same name but different parameters. 
+The compiler resolves which method to call at compile time, based on the number and types of arguments passed to the method.
+
+Runtime polymorphism: This is also known as method overriding. 
+It occurs when a subclass inherits a method from its superclass and then provides its own implementation of the method. 
+The runtime system resolves which method to call at runtime, based on the type of object that is being used.
+
+
+Dynamic method dispatch is a feature of object-oriented programming that allows the runtime system 
+to determine which method to call at runtime, based on the type of object that is being used.
+
+In Java, dynamic method dispatch is implemented through the use of method overriding. 
+Method overriding occurs when a subclass inherits a method from its superclass and then provides its own implementation of the method.
+
+When a method is overridden, the compiler will generate two versions of the method: one version for the superclass and one version for the subclass. 
+The runtime system will then use the appropriate version of the method, based on the type of object that is being used.
+
+final:
+
+can be used with variable, method, class
+
+he final keyword in Java is used to restrict the modification of a variable, method, or class.
+
+Final variables: A final variable can be assigned a value only once. Once a final variable has been assigned a value, it cannot be changed.
+Final methods: A final method cannot be overridden by a subclass.
+Final classes: A final class cannot be extended by a subclass.
+The final keyword can be used to improve the readability and maintainability of code. 
+
+For example, 
+a final variable can be used to indicate that a value should not be changed. This can help to prevent errors and make the code more readable.
+
+
+Object class:
+
+Upcasting and downcasting:
+
+Upcasting: Upcasting is the process of assigning a subclass object to a superclass reference variable. 
+This is done implicitly by the Java compiler. For example, if you have a Dog object, you can assign it to a Animal reference variable.
+    Dog dog = new Dog();
+    Animal animal = dog; // Upcasting
+
+Downcasting: Downcasting is the process of assigning a superclass object to a subclass reference variable. 
+This must be done explicitly by the programmer. For example, if you have an Animal object, you can downcast it to a Dog object.
+	Dog dog = (Dog) animal;
+	
+Wrapper Class:
+
+a way to wrap or represent the value of primitive data types as an object. 
+By creating an object to the wrapper class, a data field is created and in this field we can store the value of a primitive data type.
+
+Abstract Keyword:
+
+You can't create a object for abstract class but you can do reference
+An abstract method is a method that is declared without any implementation. 
+Abstract classes in Java implement the concept of Abstraction in Object Oriented Programming.
+
+Hiding internal details and showing only the functionality is known as abstraction.
+
+Abstract methods do not have a body or implementation. The implementation for the abstract methods is provided by the child classes which extend the abstract class.
+
+An Abstract Class is nothing but a blueprint for the child class. Abstract classes justify the layout of your idea and does not really implement them.
+ 
+Complasary that have absract class for abstract method but not compulsary to have abstract method in abstract class.
+
+Inner Class:
+
+a class inside a class
+
+an inner class is a class defined inside another class. It is a way to logically group classes and 
+can be useful when a class is only used in one place or closely related to the enclosing class. 
+Inner classes have access to the members of the enclosing class, including private members, and can be either static or non-static
+
+Ananamous inner class:
+
+Abstarct and Ananamous inner class:
+
+Interface:
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. 
+It is used to achieve abstraction and multiple inheritance in Java.
+
+In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+
+By Default every method in interface is public absraction..... void show()=public absract void show();
+Every Varable in interface by default final and static
+
+class-class--extends
+class-interface-implements
+interface-interface-extends
+
+Enum:
+
+An enum in Java is a special type of class that represents a group of constants (unchangeable variables, like final variables).
+
+Enum constants are public, static, and final by default. 
+This means that they cannot be changed after they are declared. They are also implicitly imported into any class that imports the enum
+
+Enum with class?
+
+Annotations:
+
+Annotations are used to provide additional information about the program to the compiler and JVM. 
+This information can be used by the compiler to perform various tasks, such as:
+
+Detecting errors: Annotations can be used to detect errors in the code, such as unused variables or methods.
+Generating code: Annotations can be used to generate code, such as documentation or test cases.
+Providing information to the JVM: Annotations can be used to provide information to the JVM, such as the type of a variable or the name of a method.
+
+@Override
+@Deprecated
+@FunctionalInterface
+@Retention
+
+Functional Interface:
+
+The interface which is having only one method.
+SAM - Single Abstarct Method Interafce
+
+Lambda Expression:
+
+lambda expressions can be used to provide an implementation for functional interfaces, which are interfaces 
+with a single abstract method (SAM). Lambda expressions provide a concise way to express the implementation of the abstract method in such interfaces.
+
+Lambda expressions can be used for both anonymous classes and non-anonymous classes (i.e., named classes that implement functional interfaces).
+
+Types of Interfaces: 
+Normal Interface - Multiple Methods
+Funtional Interface/SA - Only One Method
+Marker Interface - No Methods 
+
+It provides run-time type information about objects, so the compiler and JVM have additional information about the object. 
+A marker interface is also called a tagging interface.
+
+Serilization vs Deserilization?
+
+Exceptions:
+
+Compile Time Error - 
+
+Compile-time errors are detected by the compiler, which is the program that converts the source code into machine code.
+
+Syntax errors: Syntax errors are errors in the grammar of the program. 
+For example, a syntax error would occur if you forgot to close a parenthesis or if you misspelled a keyword.
+
+Type errors: Type errors are errors in the type of a variable or expression. 
+For example, a type error would occur if you tried to add an integer and a string together.
+
+Declaration errors: Declaration errors are errors in the declaration of a variable or method. 
+For example, a declaration error would occur if you forgot to specify the type of a variable.
+
+Reference errors: Reference errors are errors in the reference to a variable or method. 
+For example, a reference error would occur if you tried to use a variable that has not been declared.
+
+RunTime Errors -  
+
+The Execution stops suddenly/in between
+Runtime errors are not detected by the compiler, so they can only be detected when the program is actually running.
+
+NullPointerException: This error occurs when you try to use a variable that is null.
+ArithmeticException: This error occurs when you try to divide by zero.
+ArrayIndexOutOfBoundsException: This error occurs when you try to access an element of an array that is out of bounds.
+ClassCastException: This error occurs when you try to cast an object to a class that it does not belong to.
+
+
+Logical Errors -
+
+A logical error is an error in a program that causes the program to behave incorrectly, but not to terminate abnormally (or crash). 
+A logical error produces unintended or undesired output or other behavior, although it may not immediately be recognized as such. Logic errors occur in both compiled and interpreted languages. Unlike a program with a syntax error, a program with a logic error is a valid program in the language, though it does not behave as intended. Often the only clue to the existence of logic errors is the production of wrong solutions, though static analysis may sometimes spot them.
+
+Here are some examples of logical errors:
+
+Using the wrong variable: For example, if you are trying to calculate the average of two numbers, 
+but you accidentally use the wrong variable, the program will produce the wrong answer.
+
+Making a mistake in the logic of the program: For example, if you are trying to sort a list of numbers, 
+but you make a mistake in the logic of the sorting algorithm, the list will not be sorted correctly.
+
+Not handling errors correctly: For example, if your program tries to open a file that does not exist, 
+the program should gracefully handle the error and not crash.
+
+Logical errors can be difficult to find and fix, because they can be caused by a variety of factors, 
+such as incorrect assumptions, incorrect logic, or incorrect data.
+
+Exceptions: 
+
+Exceptions are basically a run time errors.
+An exception is an event that occurs during the execution of a program that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+
+try and catch:
+
+The try block is the block of code that may throw an exception. T
+he catch block is the block of code that will be executed if an exception is thrown. 
+The Exception is the type of exception that the catch block can handle.
+
+try
+{
+
+}
+catch(Exception e)
+{
+
+}
+
+Exception is the super class but exception extends throwable
+
+Some of Subclasses:
+
+ArithmeticException
+ArrayIndexOutOfBoundsException
+NullPointerException
+
+Mapping: Object-throwable-1. Error 2.Exception-
+
+1. Error - something you can't handle EX: Threaddeath,IOError, Virtual Machine Error, Out of Memory etc
+2. Exceptions - Runtime Exception, SQLExceptions, IOExceptions etc
+
+Unchecked Exceptions - are exceptions that do not have to be handled by the program. 
+If an unchecked exception is not handled, the program will continue to run, but the exception will be thrown. 
+Unchecked exceptions are usually caused by errors in the program's input, such as trying to convert a string to an integer that is not a valid number.
+
+
+Checked Exceptions - are exceptions that must be handled by the program. If a checked exception is not handled, the program will not compile. 
+Checked exceptions are usually caused by errors in the program's logic, such as trying to divide by zero or accessing an element of an array that is out of bounds.
+
+Feature	Checked Exceptions	Unchecked Exceptions
+Must be handled?	Yes	No
+Compile-time error if not handled?	Yes	No
+Caused by errors in the program's logic?	Yes	No
+Caused by errors in the program's input?	No	Yes
+
+throw and throws:
+
+throw : The throw keyword is used to explicitly throw an exception. When an exception is thrown, 
+the flow of program execution is stopped and the control is transferred to the nearest enclosing try-catch block that matches the type of exception thrown. 
+If no such match is found, the default exception handler terminates the program.
+
+throws: throws keyword is used in the method declaration to declare the type of exceptions that the method may throw. 
+The caller to these methods has to handle the exception using a try-catch block.
+
+Custom Exceptions:
+
+In Java, you can create custom exceptions to handle specific errors or situations. Custom exceptions are subclasses of the Exception class.
+
+To create a custom exception, you need to:
+
+Create a new class that inherits from the Exception class.
+Override the getMessage() method to return a message that describes the exception.
+Optionally, override other methods, such as printStackTrace(), to provide more information about the exception
+
+Ducking Exceptions:
+
+ducking exception is a term used to describe the act of not handling an exception. When an exception is not handled, it is said to be ducked.
+
+Ducking exceptions can be dangerous, because it can lead to the program crashing. However, there are some cases where ducking exceptions may be necessary. 
+For example, 
+if you are writing code that is called by another part of the program, and you do not have control over how that code is written, you may need to duck exceptions
+
+Finally:
+The finally block in Java is a block of code that is always executed, regardless of whether an exception is thrown or not. 
+The finally block is often used to perform cleanup tasks, such as closing files or releasing resources.
+
+Threads:
+
+a thread is a lightweight process that can run concurrently with other threads. 
+Threads are used to execute tasks in parallel, which can improve the performance of a program.
+
+extends Thread
+.start()
+run() method
+In every thread, you need to have run method
+
+Thread Priority and Sleep:
+
+In Java, thread priority is an integer value that is used to indicate the relative importance of a thread. 
+Threads with higher priority are more likely to be scheduled to run than threads with lower priority.
+
+The thread priority can be set using the setPriority() method. The setPriority() method takes an integer value as an argument. 
+The valid values for the priority are 1 to 10, where 1 is the lowest priority and 10 is the highest priority.
+
+The default priority for a thread is 5. This means that a thread with the default priority will have the same chance of 
+being scheduled to run as any other thread with the default priority.
+
+The thread scheduler is responsible for scheduling threads to run. The thread scheduler will typically try to schedule 
+threads with higher priority to run first. However, the thread scheduler is not guaranteed to always schedule threads with higher priority to run first.
+
+.setPriority()
+the thread scheduler is responsible for deciding which thread to run next. The thread scheduler is a part of the Java Virtual Machine (JVM).
+he thread scheduler can also be influenced by the user. For example, the user can set the priority of a thread using the setPriority() method
+
+
+In Java, the sleep() method is used to pause the execution of the current thread for a specified period of time. The sleep() method is a static method of the Thread class.
+
+The sleep() method takes two arguments:
+
+The first argument is the number of milliseconds to sleep.
+The second argument is the number of nanoseconds to sleep.
+If the second argument is 0, then the sleep() method will sleep for the specified number of milliseconds. 
+If the second argument is not 0, then the sleep() method will sleep for the specified number of milliseconds plus the specified number of nanoseconds.
+
+The sleep() method throws an InterruptedException if the thread is interrupted while it is sleeping.
+
+Runnable thread:
+In Java, there are two ways to create a thread: by extending the Thread class or by implementing the Runnable interface.
+
+Thread is a class that represents a thread of execution. It provides methods for starting, stopping, and pausing the thread.
+
+Runnable is an interface that represents a task that can be executed by a thread. It provides a single method, run(), which is the entry point for the task.
+
+Race Conditions:
+A race condition is a bug in a multithreaded program where the outcome of a program depends on the order in which threads access shared resources. 
+Race conditions can be difficult to debug because they are often intermittent and can be caused by factors 
+such as the timing of the threads or the number of threads running.
+
+Thread States:
+States: new->runnable->running->waiting->dead
+ 
+Collection API -Concept
+Collection - Interface
+Collections - Class
+
+Collection API
+
+The Collection API is a set of interfaces and classes that provide a unified way to represent and manipulate collections of objects in Java. 
+The Collection API is part of the Java Collections Framework, which is a set of classes and interfaces that 
+provide a comprehensive collection of data structures and algorithms.
+The Collection API defines a number of interfaces, including the Collection interface, the List interface, the Set interface, and the Map interface. 
+These interfaces define the basic operations that can be performed on collections, such as adding, removing, and iterating over elements.
+The Collection API also defines a number of classes that implement the Collection interfaces, such as the ArrayList class, the LinkedList class, 
+the HashSet class, and the HashMap class. These classes provide concrete implementations of the Collection interfaces, 
+and they provide a variety of methods for manipulating collections.
+
+Collection Interface
+
+The Collection interface is the root interface of the Collection API. It defines the basic operations that can be performed on collections, 
+such as adding, removing, and iterating over elements.
+The Collection interface has a number of methods, including the following:
+add(): Adds an element to the collection.
+remove(): Removes an element from the collection.
+iterator(): Returns an iterator for the collection.
+size(): Returns the number of elements in the collection.
+
+Collections Class
+
+The Collections class is a utility class that provides a number of static methods for working with collections. 
+The Collections class provides methods for sorting, searching, and copying collections.
+The Collections class has a number of methods, including the following:
+sort(): Sorts a collection.
+binarySearch(): Performs a binary search on a collection.
+copy(): Copies a collection.
+
+
+
